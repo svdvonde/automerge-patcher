@@ -18,7 +18,7 @@ const canWrite = (obj: object, path: string[], value: any): boolean => {
 
     const valueFromDoc = getProperty(newDoc, path);
     if (typeof value === "object") {
-        return JSON.stringify(value) === JSON.stringify(value);
+        return JSON.stringify(valueFromDoc) === JSON.stringify(value);
     } else {
         return valueFromDoc === value;
     }
